@@ -242,22 +242,9 @@ span {
     font-weight: 500;
 }
 
-/* .online-game-img .online-game-img-div:nth-child(3) {
+
+.online-game-img-div:nth-child(3) {
     position: relative;
-    display: flex;
-    border-radius: 2rem;
-    overflow: hidden;
-    width: 300px;
-    height: 400px;
-}
-
-.online-game-img .online-game-img-div:nth-child(3) img {
-
-    transition: .5s ease;
-}
-
-.online-game-img-div:nth-child(3):hover img {
-    transform: scale(1.1);
 }
 
 .online-game-img-div:nth-child(3) .online-game-layer {
@@ -266,8 +253,6 @@ span {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
-    color: var(--white-color);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -277,29 +262,14 @@ span {
     transition: .5s ease;
 }
 
-.online-game-img-div:nth-child(3) .online-game-layer a i {
-    font-size: 50px;
-    color: white;
+.online-game-img-div:nth-child(3):hover .online-game-layer a i {
+    font-size: 30px;
+    color: var(--white-color);
 }
 
 .online-game-img-div:nth-child(3):hover .online-game-layer {
     opacity: 1;
 }
-
-.online-game-img-div:nth-child(3) {
-    position: relative;
-}
-
-.image-container {
-    position: relative;
-}
-
-.bottom-text {
-    position: absolute;
-    text-align: center;
-    top: 3000;
-
-} */
 
 /* Online Game CSS End */
 
@@ -336,7 +306,6 @@ span {
 
 /* Play Instant CSS End */
 
-
 /* Games Online CSS Start */
 #games-online-container {
     display: flex;
@@ -350,6 +319,8 @@ span {
 }
 
 #games-online-container #games-online-img #games-online-img-two {
+    width: 300px;
+    height: 300px;
     margin-top: -300px;
     margin-left: 500px;
     flex-shrink: 0;
@@ -382,8 +353,9 @@ span {
     width: 100%;
     color: var(--white-color);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+    margin-top: 80px;
 }
 
 .career-content {
@@ -392,10 +364,18 @@ span {
     padding-left: 70px;
 }
 
+.career-content h1 {
+    color: #FFF;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    margin-bottom: 20px;
+}
+
 .career-content p {
+    color: #FFF;
     font-size: 18px;
     font-weight: 400;
-    color: #FFF;
 }
 
 .career-content .career-paragraph {
@@ -420,24 +400,11 @@ span {
     color: #FF42A5;
 }
 
-.career-content h1 {
-    font-size: 48px;
-    font-weight: 700;
-}
-
-.career-img {
-    width: 50%;
-    padding-right: 100px;
-    margin-right: 50px;
-    flex-shrink: 0;
-}
-
 /* Career CSS End */
 
 /* Action CSS Start */
 #action-container {
     width: 100%;
-    height: 400px;
 }
 
 .action-content {
@@ -563,10 +530,12 @@ span {
 
 /* Footer CSS End */
 
+
 /* Responsive Design */
 
-/* Header Part Responsive Start */
 @media (max-width: 470px) {
+
+    /* Header Part Responsive Start */
     #header-container {
         flex-direction: column;
         justify-content: center;
@@ -596,12 +565,11 @@ span {
     .logo-img {
         padding: 15px 30px;
     }
-}
 
-/* Header Part Responsive End */
+    /* Header Part Responsive End */
 
-/* Banner Section Responsive Start */
-@media (max-width: 470px) {
+    /* Banner Section Responsive Start */
+
     #play-container {
         flex-direction: column-reverse;
         align-items: center;
@@ -621,12 +589,11 @@ span {
         margin-top: 60px;
         width: 100%;
     }
-}
 
-/* Banner Section Responsive End */
+    /* Banner Section Responsive End */
 
-/* Gamer Section Responsive Start */
-@media (max-width: 470px) {
+    /* Gamer Section Responsive Start */
+
     #gamer-container {
         flex-direction: column;
         justify-content: center;
@@ -639,12 +606,10 @@ span {
         width: 100%;
         height: 300px;
     }
-}
 
-/* Gamer Section Responsive End */
+    /* Gamer Section Responsive End */
 
-/* Online Game Responsive Start */
-@media (max-width: 470px) {
+    /* Online Game Responsive Start */
     .online-game-img {
         flex-direction: column;
         justify-content: center;
@@ -663,47 +628,63 @@ span {
     #online-game-container #online-game-paragraph {
         font-size: 15px;
     }
-}
 
-/* Online Game Responsive End */
+    /* Online Game Responsive End */
 
-/* Play Instant Responsive Start */
-@media(max-width: 470px) {
+    /* Play Instant Responsive Start */
     #play-instant {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         margin-top: 40px;
-        margin: auto;
     }
 
-    #play-instant-img #play-instant-img-one {
-        width: 300px;
-        height: 400px;
+    .play-instant-content h1 {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    #play-instant-img-one {
+        width: 100%;
+        margin-top: 10px;
+
+    }
+
+    /* Play Instant Responsive End */
+
+    /* Game Online Responsive Start */
+    #games-online-container {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
         margin-top: 30px;
     }
 
-    #play-instant-img #play-instant-img-two img {
-        width: 100px;
-        height: 200px;
-        margin-top: 300px;
-        margin-right: 300px;
+    .games-online-content .games-online-content-heading {
+        text-align: center;
     }
 
-    /* #play-instant-img {
-        display: flex;
-        justify-content: center;
-    } */
-}
+    .games-online-content p {
+        text-align: center;
+    }
 
-/* Play Instant Responsive End */
+    #games-online-img-one {
+        width: 100%;
+        margin-top: 10px;
+    }
 
-/* Career Responsive Start */
-@media (max-width: 470px) {
+    #games-online-img #games-online-img-two {
+        display: none;
+    }
+
+    /* Game Online Responsive End */
+
+    /* Career Responsive Start */
     #career-container {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 30px;
     }
 
     .career-content {
@@ -737,6 +718,50 @@ span {
         margin-right: 0;
     }
 
-}
+    /* Career Responsive End */
 
-/* Career Responsive End */
+
+    /* Action Responsive Start */
+
+    .action-content {
+        flex-direction: column;
+    }
+
+    .action-content .action-content-div {
+        margin: 10px;
+    }
+
+    .action-content-div-two {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .action-content-div-two .action-content-div {
+        margin: 10px;
+    }
+
+    /* Action Responsive End */
+
+    /* Footer Responsive Start */
+
+    #footer-container .footer-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #footer-container .footer-content p {
+        margin-bottom: 10px;
+    }
+
+    #footer-container .footer-terms {
+        font-size: 12px;
+    }
+
+    #footer-container .footer-terms p {
+        margin-left: 10px;
+    }
+
+    /* Footer Responsive End */
+}
